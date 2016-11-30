@@ -1,5 +1,7 @@
 package javaapplication2;
 
+import javax.swing.Icon;
+
 /*
  * This class inherite from the character class
  * It will be used to implement NPC (none playable character) into our game
@@ -33,10 +35,11 @@ public class NPC extends Character
      * @param amo : it is the armor which is carried by character
      * @param host: it is the boolean value defining if hostile or not
      * @param txt: it is the string value displayed when interacting with the NPC
+     * @param pict: correspond to NPC picture
      */    
-    public NPC(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,boolean host,String txt)
+    public NPC(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,boolean host,String txt,Icon pict)
     {
-        super(name,stren,def,mon,sizeInt,wea,amo);
+        super(name,stren,def,mon,sizeInt,wea,amo,pict);
         hostile=host;
         speech=txt;
     }

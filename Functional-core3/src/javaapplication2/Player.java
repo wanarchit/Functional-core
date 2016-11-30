@@ -4,6 +4,8 @@
  */
 package javaapplication2;
 
+import javax.swing.Icon;
+
 /**
  * @author Marin
  */
@@ -25,10 +27,11 @@ public class Player extends Character
      * @param sizeInt : it is the size of inventory
      * @param wea : it is the weapon which is carried by character
      * @param amo : it is the armor which is carried by character
+     * @param pict: Correspond to picture of the player
      */
-    public Player(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,Room r1)
+    public Player(String name,int stren, int def, int mon,int sizeInt, Weapon wea, Armor amo,Room r1,Icon pict)
     {
-        super(name,stren,def,mon,sizeInt,wea,amo);
+        super(name,stren,def,mon,sizeInt,wea,amo,pict);
         actualRoom=r1;
         
     }

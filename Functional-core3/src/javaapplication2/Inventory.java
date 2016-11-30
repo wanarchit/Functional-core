@@ -27,6 +27,7 @@ public Inventory(int s)
 }
 /**
  * Setter for the inventory size
+ * @param s Inventory size to be set
  */
 public void setSize(int s)
 {
