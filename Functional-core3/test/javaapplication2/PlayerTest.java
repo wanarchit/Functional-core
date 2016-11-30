@@ -24,7 +24,7 @@ public class PlayerTest {
     
     @Before
     public void setUp() {
-        myPlayer= new Player("toto",3,3,3,3,null,null,r);
+        myPlayer= new Player("toto",3,3,3,3,null,null,r,null);
     }
     
     @After

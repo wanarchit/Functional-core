@@ -34,6 +34,7 @@ public class MagicDoor extends Door {
      * @param lock
      * @param Actual
      * @param Next
+     * @param pictDoor of door
      */
 
     public MagicDoor(String n, String p, Boolean lock, Room Actual, Room Next, Icon pictDoor)

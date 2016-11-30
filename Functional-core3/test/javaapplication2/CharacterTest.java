@@ -32,7 +32,7 @@ public class CharacterTest {
     public void setUp()
     {
         // str = 3 et def = 4
-        myCharacter = new Character("Toto",3,4,50,10, null,null);
+        myCharacter = new Character("Toto",3,4,50,10, null,null,null);
         myWeapon = new Weapon("axe",5,4,null);
         // weapon : bonusStr = 4
         myArmor = new Armor("head",6,5,null);
@@ -65,7 +65,7 @@ public class CharacterTest {
      */
     @Test
     public void testDefaultName(){
-        Character bad = new Character("",3,4,50,10, null,null);
+        Character bad = new Character("",3,4,50,10, null,null,null);
         assertEquals("WoZChar", bad.getName());
     }
     

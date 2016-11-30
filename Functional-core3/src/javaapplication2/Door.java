@@ -19,6 +19,7 @@ public class Door {
      * @param l a boolean to set the door to locked or not
      * @param actual the room in which the door is
      * @param next the room behind the door
+     * @param picture of the door
      */
     public Door(boolean l, Room actual, Room next, Icon picture){     
         locked = l;

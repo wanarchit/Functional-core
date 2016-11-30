@@ -22,7 +22,7 @@ public class ArmorTest {
     
     @Before
     public void setUp() {
-        charact = new Character("nameChar",10,10,10,5,null,null);
+        charact = new Character("nameChar",10,10,10,5,null,null,null);
         armor = new Armor ("name1", 5, 5,null);
         charact.getInventory().addObject(armor);
     }

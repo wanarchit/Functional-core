@@ -27,7 +27,7 @@ public class ItemTest {
     {
      pc = 50;
      nameI = "tintin";
-     item = new Weapon(nameI,pc,10);    
+     item = new Weapon(nameI,pc,10,null);    
     }
     
     /**

@@ -14,6 +14,7 @@ public class Key extends Item{
      * @param nI Item name, here key name
      * @param pc the price of the item
      * @param d1 the door the key opens
+     * @param pict of the key
      */
 public Key(String nI, int pc, LockedDoor d1, Icon pict){
     super(nI, pc, pict);

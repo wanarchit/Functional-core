@@ -22,7 +22,7 @@ public class ChestTest {
     @Before
     public void setUp() 
     {
-        chest = new Chest("chest1", 50, 3);
+        chest = new Chest("chest1", 50, 3,null);
     }
     
     @After

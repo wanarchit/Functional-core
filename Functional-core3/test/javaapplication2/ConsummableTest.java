@@ -22,7 +22,7 @@ public class ConsummableTest {
     @Before
     public void setUp() 
     {
-        charact = new Character("toto",5,5,7,4,null,null);
+        charact = new Character("toto",5,5,7,4,null,null,null);
         consummable = new Consummable ("potion",5,5,null);
         consummable2 = new Consummable ("poison",5,-10,null);
         charact.getInventory().addObject(consummable);

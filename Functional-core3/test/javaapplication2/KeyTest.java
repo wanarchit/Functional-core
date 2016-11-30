@@ -19,7 +19,7 @@ public class KeyTest {
         
     @Before
     public void setUp() {
-        key = new Key("name", 5, r1);
+        key = new Key("name", 5, r1,null);
     }
     
     @After

@@ -21,7 +21,7 @@ public class WeaponTest {
     @Before
     public void setUp() 
     {
-        weapon = new Weapon ("name1", 5, 5);
+        weapon = new Weapon ("name1", 5, 5,null);
     }
     
     @After
