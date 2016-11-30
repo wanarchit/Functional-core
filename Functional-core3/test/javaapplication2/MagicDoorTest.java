@@ -27,8 +27,8 @@ public class MagicDoorTest {
     
     @Before
     public void setUp() {
-        r1 = new Room ("kitchen", false);
-        r2 = new Room ("bedroom", false);
+        r1 = new Room ("kitchen", false, null);
+        r2 = new Room ("bedroom", false, null);
         md = new MagicDoor("magicD","password", false, r1, r2, null);
     }
     
