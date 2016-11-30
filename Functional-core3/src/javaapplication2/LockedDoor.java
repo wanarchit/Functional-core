@@ -17,8 +17,8 @@ import javax.swing.*;
 
 public class LockedDoor extends Door {
     
-    private final Key key;
-    private final String name;
+    private final Key key; //the key which can open the door
+    private final String name; //the name of the door
 
      
     
@@ -30,16 +30,15 @@ public class LockedDoor extends Door {
      * @param doorName
      * @param keyName
      * @param keyPrice
-     * @param pict
+     * @param pictKey
+     * @param pictDoor
     */   
     
-    public LockedDoor(boolean open, Room actual, Room next, String doorName, String keyName, int keyPrice, Icon pict){
+    public LockedDoor(boolean open, Room actual, Room next, String doorName, String keyName, int keyPrice, Icon pictKey, Icon pictDoor){
         
-        super(open,actual,next);
+        super(open, actual, next, pictDoor);
         name = doorName;
-        key = new Key (keyName, keyPrice, this, pict);
-
-        
+        key = new Key (keyName, keyPrice, this, pictKey);
     }
 
     
@@ -48,7 +47,6 @@ public class LockedDoor extends Door {
      * @param keyInserted
     * @return a boolean 
     * This method allowed to check if the Key of the player can open a locked door
-    *  If key and the door as the same name, the method open the lockedDoor.
     */
     
     public boolean checkKey(Key keyInserted){

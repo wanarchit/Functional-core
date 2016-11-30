@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
  * @author Jonathan, Babujhi
  */
 public class RoomTest {
-    private Room r;
+    private Room r, r1;
     private Door d1, d2;
     
     public RoomTest() {
@@ -28,7 +28,8 @@ public class RoomTest {
     
     @Before
     public void setUp() {
-        r = new Room("Cuisine", true);
+        r = new Room("Cuisine", true, null);
+        r1 = new Room("Kitchen", true, null);
     }
     
     @After
@@ -71,10 +72,12 @@ public class RoomTest {
     @Test
     public void testDoorTwice() {
         System.out.println("DoorTwice");
-        d1 = new Door(true, r, r);
+        d1 = new Door(true, r, r1, null);
         d2 = d1;
         r.setExit("North", d1);
         r.setExit("South", d2);
         assertNotSame(r.getHashMap().get("South"), r.getHashMap().get("North"));
     }
+    
+    
 }

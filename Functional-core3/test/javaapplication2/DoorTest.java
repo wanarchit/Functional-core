@@ -27,9 +27,9 @@ public class DoorTest {
     
     @Before
     public void setUp() {
-        r1 = new Room("Cuisine", true);
-        r2 = new Room("Salon", false);
-        d = new Door(false, r1, r2);
+        r1 = new Room("Cuisine", true, null);
+        r2 = new Room("Salon", false, null);
+        d = new Door(false, r1, r2, null);
     }
     
     @After

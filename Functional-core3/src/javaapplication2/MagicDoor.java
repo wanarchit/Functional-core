@@ -36,10 +36,10 @@ public class MagicDoor extends Door {
      * @param Next
      */
 
-    public MagicDoor(String n, String p, Boolean lock, Room Actual, Room Next )
+    public MagicDoor(String n, String p, Boolean lock, Room Actual, Room Next, Icon pictDoor)
 {
             
-        super(lock, Actual, Next);
+        super(lock, Actual, Next, pictDoor);
         pwd = p;
         name = n; 
 }
@@ -50,26 +50,29 @@ public class MagicDoor extends Door {
     */
     
     /**
+     * Check if the password given by the player is the same as the password which open the door
      * @param pwd_user
      * @return boolean
      */
     
     public boolean resolve (String pwd_user) {
-     
-        if (pwd_user.equals(pwd))
-        {
-        return true;
-        }
-        else
-        {
-        return false;
-        }
+        return pwd_user.equals(pwd);
     }
     
-    
-    public String getMagicDoor() {
-    
+    /**
+     * 
+     * @return The password of the door
+     */
+    public String getPwd() {
         return pwd;
+    }
+    
+    /**
+     * 
+     * @return the name of the door
+     */
+    public String getName() {
+        return name;
     }
     
 }
