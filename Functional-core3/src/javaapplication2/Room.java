@@ -65,12 +65,12 @@ public class Room {
     public void setExit(String s, Door d){
         boolean bool = true;
         for (HashMap.Entry<String, Door> entry : exit.entrySet()) {
-            String st = entry.getKey();
-            if (exit.get(st)==d) {
+            if (entry.getValue().getNextRoom().equals(d.getNextRoom())) {
                 bool = false;
+                break;
             }
         }
-        if (bool) {
+        if (bool && exit.containsKey(s)==false) {
             exit.put(s,d);
         }
     }
