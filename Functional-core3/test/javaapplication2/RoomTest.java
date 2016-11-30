@@ -75,8 +75,9 @@ public class RoomTest {
         d1 = new Door(true, r, r1, null);
         d2 = d1;
         r.setExit("North", d1);
-        r.setExit("South", d2);
-        assertNotSame(r.getHashMap().get("South"), r.getHashMap().get("North"));
+        r.setExit("North", d2);
+        assertSame(d1, d2);
+        assertEquals(1, r.getSizeHashMap());
     }
     
     
