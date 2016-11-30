@@ -9,7 +9,7 @@ package javaapplication2;
  */
 public class Player extends Character
 {
-    private int karmaBar = 50;
+    private int karmaBar = 50;//Karma default value is always set on 50
     private Room actualRoom;
     /**
      * Constructor for the object Player
@@ -46,10 +46,12 @@ public class Player extends Character
     }
     /**
      * setter for the karma attribute
-     * @param k which is the karma value that need to be set
+     * @param k karma value between 0 and 100
      */
     public void setKarma(int k){
+        if(k <= 100 && k >= 0){
         karmaBar=k;
+        }
     }
     
     /*

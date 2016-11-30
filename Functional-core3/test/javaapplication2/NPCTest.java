@@ -59,6 +59,7 @@ public class NPCTest {
     public void testSetSpeech()
     {
         myNPC.setSpeech("test");
+        //Assuming that with SetSpeech method, the string value is set to "test"
         assertEquals("test",myNPC.getSpeech());
     }
 

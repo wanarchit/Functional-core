@@ -1,7 +1,5 @@
 package javaapplication2;
 
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
-
 /*
  * This class inherite from the character class
  * It will be used to implement NPC (none playable character) into our game
@@ -53,7 +51,7 @@ public class NPC extends Character
     }
 /**
  * Allows to change the displayed text by the NPC
- * @param NPC displayed text as string
+ * @param txt NPC text displayed as String value
  */
     public void setSpeech(String txt)
     {

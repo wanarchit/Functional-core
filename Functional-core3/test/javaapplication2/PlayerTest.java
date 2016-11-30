@@ -20,10 +20,7 @@ import static org.junit.Assert.*;
 public class PlayerTest {
     private Player myPlayer;
     private Room r,r2;
-    public PlayerTest() 
-    {
-        
-    }    
+
     
     @Before
     public void setUp() {
@@ -53,19 +50,36 @@ public class PlayerTest {
     public void testSetKarma()
     {
         myPlayer.setKarma(20);
+        //Assuming the setKarma method correctly set karma value on 20
         assertEquals(20,myPlayer.getKarma());
     }
     
     /**
      * Test of add10Karma of class Player
      * Test the methode correctly add 10 karma to the attribute
+     * Here we test it add 10 by 10, blocking to 100 value
      */
     @Test
     public void testAdd10Karma()
     {
-        //Assuming the value is set to 20
         myPlayer.add10Karma();
+        //karma should be equal to 60
         assertEquals(60,myPlayer.getKarma());
+        myPlayer.add10Karma();
+        //karma should be equal to 70
+        assertEquals(70,myPlayer.getKarma());
+        myPlayer.add10Karma();
+        //karma should be equal to 80
+        assertEquals(80,myPlayer.getKarma());
+        myPlayer.add10Karma();
+        //karma should be equal to 90
+        assertEquals(90,myPlayer.getKarma());
+        myPlayer.add10Karma();
+        //karma should be equal to 100
+        assertEquals(100,myPlayer.getKarma());
+        myPlayer.add10Karma();
+        //karma should be equal to 100 again because it is the maximal value
+        assertEquals(100,myPlayer.getKarma());
     }
     
     /**
@@ -75,10 +89,26 @@ public class PlayerTest {
     @Test
     public void testDel10Karma()
     {
-        //Assuming the value is set to 30
         myPlayer.del10Karma();
+        //Assuming that karma is equal to 40
         assertEquals(40,myPlayer.getKarma());
+        myPlayer.del10Karma();
+        //Assuming that karma is equal to 30
+        assertEquals(30,myPlayer.getKarma());
+        myPlayer.del10Karma();
+        //Assuming that karma is equal to 20
+        assertEquals(20,myPlayer.getKarma());
+        myPlayer.del10Karma();
+        //Assuming that karma is equal to 10
+        assertEquals(10,myPlayer.getKarma());
+        myPlayer.del10Karma();
+        //Assuming that karma is equal to 0
+        assertEquals(0,myPlayer.getKarma());
+        myPlayer.del10Karma();
+        //Assuming that karma is blocked at 0
+        assertEquals(0,myPlayer.getKarma());
     }
+    
     
     /**
      * Test getActualRoom method of Player class

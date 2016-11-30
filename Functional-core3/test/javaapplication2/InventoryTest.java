@@ -25,8 +25,8 @@ public class InventoryTest {
     @Before
     public void setUp() 
     {
-        myWeapon = new Weapon("axe",5,4);
-        myArmor = new Armor("head",6,5);
+        myWeapon = new Weapon("axe",5,4,null);
+        myArmor = new Armor("head",6,5,null);
         inv1 = new Inventory(2);
         
     }
@@ -79,11 +79,31 @@ public class InventoryTest {
         assertEquals(0,inv1.getLength());
         
     }
-    
+    /**
+     * Method testCheckInv
+     * Test if the Item is in the inventory or not
+     */
     @Test
     public void testCheckInv(){
+        //Assuming myWeapon is not in the inventory
         assertEquals(false,inv1.checkInv(myWeapon));
+        //Adding myWeapon and assuming addObject method is functionnal
         inv1.addObject(myWeapon);
+        //Assuming myWeapon is in the inventory
         assertEquals(true,inv1.checkInv(myWeapon));
+    }
+    
+    /**
+     * Method testGetItem
+     * Test it correctly return the object in the inventory position needed
+     */
+    @Test
+    public void testGetItem(){
+        inv1.addObject(myArmor);
+        //Assuming it correctly add myArmor as first inventory item
+        assertEquals(myArmor,inv1.getItem(0));
+        inv1.addObject(myWeapon);
+        //Assuming it correctly add myWeapon as second inventory item
+        assertEquals(myWeapon,inv1.getItem(1));
     }
 }
