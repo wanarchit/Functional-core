@@ -1,5 +1,7 @@
 package javaapplication2;
 
+import javax.swing.Icon;
+
 /**
  *This class allows the creation of a chest which is an object which is used by the character
  * @Marion & Clément
@@ -10,17 +12,20 @@ public class Chest {
     private int money;//the money contained in the chest.
     private Inventory inv; // inventary presents in the chest created
     private String nameChest; // name of the chest created
+    private Icon pic;
     
     /**
      * Constructor which allows the creation of the chest
      * @param name name of the chest to do a difference between the different chest
      * @param m money presents in the chest
      * @param sizeInv size of the inventory in the chest
+     * @param pict of the chest
      */
-    public Chest(String name, int m, int sizeInv){
+    public Chest(String name, int m, int sizeInv, Icon pict){
         money = m;
         nameChest = name;
         inv = new Inventory(sizeInv);
+        pic = pict;
     }
     
     
@@ -55,6 +60,10 @@ public class Chest {
      */
     public Inventory getInventory(){
         return inv;
+    }
+    
+    public Icon getIconChest(){
+        return pic;
     }
 }
 

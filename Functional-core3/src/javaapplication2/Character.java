@@ -1,5 +1,7 @@
 package javaapplication2;
 
+import javax.swing.Icon;
+
 /**
  * The class Character
  * 
@@ -39,6 +41,7 @@ public class Character
     // It is the gold quantity that possosses by character
     // Money cannot be negative but can be equal 0, there is no positive limit
     private int money;
+    private Icon pic;
    
     
     /**
@@ -55,8 +58,9 @@ public class Character
      * @param sizeInt : it is the size of inventory
      * @param wea : it is the weapon which is carried by character
      * @param amo : it is the armor which is carried by character
+     * @param pict : it is the picture of character
      */
-    public Character(String name,int stren, int def, int mon, int sizeInt, Weapon wea, Armor amo){
+    public Character(String name,int stren, int def, int mon, int sizeInt, Weapon wea, Armor amo, Icon pict){
         hP=100;
         if (name.equals("")){
             name="WoZChar";}
@@ -66,7 +70,8 @@ public class Character
         money=mon;
         inv = new Inventory(sizeInt);
         weaponEquipped=wea;
-        armorEquipped=amo;        
+        armorEquipped=amo;   
+        pic = pict;
     }
 
 /**
@@ -233,6 +238,10 @@ public class Character
         }
         return totDef;
     }
+   
+   public Icon getIconChar(){
+       return pic;
+   }
     
 }
             

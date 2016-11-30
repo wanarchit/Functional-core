@@ -45,6 +45,10 @@ public String getName(){
 return nameItem;
 }
 
+/**
+ * 
+ * @return picture of 
+ */
 public Icon getPicture(){
     return pic;
 }

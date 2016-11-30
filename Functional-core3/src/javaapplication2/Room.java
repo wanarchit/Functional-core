@@ -1,6 +1,7 @@
 package javaapplication2;
 
 import java.util.*;
+import javax.swing.*;
 
 /**
  * This class allows to handle Room. Each Room has a name,a set of character, 
